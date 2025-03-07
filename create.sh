@@ -10,8 +10,8 @@ fi
 declare -a function_files=("arrays/arrays.c" "arrays/arrays.py" "arrays/go/arrays.go"
     "search/search.c" "search/search.py" "search/go/search.go")
 
-declare -a test_files=("tests/test_arrays.c" "tests/test_arrays.py" "tests/go/arrays_test.go"
-    "tests/test_search.c" "tests/test_search.py" "tests/go/search_test.go")
+declare -a test_files=("tests/c/arrays_test.c" "tests/py/arrays_test.py" "tests/go/arrays_test.go"
+    "tests/c/search_test.c" "tests/py/search_test.py" "tests/go/search_test.go")
 
 for file in "${function_files[@]}"; do
     if [ ! -f "$TODAY/$file" ]; then
