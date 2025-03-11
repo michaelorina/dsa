@@ -76,7 +76,7 @@ for file in tests/c/*.c; do
     output_file="${file%.c}"
 
     echo -e "${CYAN}▶ Running C test: $test_name${RESET}" | tee -a "$LOG_FILE"
-    gcc "$file" -o "$output_file" 2>> "$LOG_FILE"
+    gcc "$file" -o "$output_file" -lm 2>> "$LOG_FILE"
 
     if ./"$output_file" >> "$LOG_FILE" 2>&1; then
         echo -e "${GREEN}✅ $test_name PASSED${RESET}" | tee -a "$LOG_FILE"

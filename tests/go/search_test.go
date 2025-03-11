@@ -46,3 +46,23 @@ func TestBinarySearch(t *testing.T) {
 		}
 	}
 }
+
+func TestTwoCrystalBalls(t *testing.T) {
+	tests := []struct {
+		array    []bool
+		expected int
+	}{
+		{[]bool{false, false, false, false, true, true, true}, 4},
+		{[]bool{true, true, true, true}, 0},
+		{[]bool{false, false, false, false, false, false, false, false, false, true}, 9},
+		{[]bool{false, false, false, false, false}, -1},
+		{[]bool{}, -1},
+	}
+
+	for _, test := range tests {
+		result := search.TwoCrystalBalls(test.array)
+		if result != test.expected {
+			t.Errorf("TwoCrystalBalls(%v) = %d; want %d", test.array, result, test.expected)
+		}
+	}
+}

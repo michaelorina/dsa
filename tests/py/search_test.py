@@ -1,5 +1,5 @@
 import unittest
-from latest.search.search import linear_search, binary_search 
+from latest.search.search import linear_search, binary_search, two_crystal_balls
 
 class TestSearchFunctions(unittest.TestCase):
 
@@ -32,6 +32,12 @@ class TestSearchFunctions(unittest.TestCase):
         
         self.assertEqual(binary_search([5], 5), 0)
         self.assertEqual(binary_search([5], 1), -1)
+    
+    def test_two_crystal_balls(self):
+        assert two_crystal_balls([False, False, False, True, True]) == 3
+        assert two_crystal_balls([False] * 50 + [True] * 50) == 50
+        assert two_crystal_balls([True] * 100) == 0
+        assert two_crystal_balls([False] * 100) == -1
 
 if __name__ == "__main__":
     unittest.main()

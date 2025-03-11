@@ -1,24 +1,13 @@
 import unittest
-from latest.arrays.arrays import static_array, dynamic_array 
+from latest.arrays.arrays import array
 
-class TestArrayFunctions(unittest.TestCase):
+class TestArrayFunction(unittest.TestCase):
 
-    def test_static_array(self):
-        result = static_array()
-
-        self.assertIsInstance(result, list)
-
-        self.assertEqual(len(result), 5)
-        
-        self.assertTrue(all(x is None for x in result))
-
-    def test_dynamic_array(self):
-        result = dynamic_array()
+    def test_array(self):
+        result = array()
         
         self.assertIsInstance(result, list)
-        
-        self.assertEqual(len(result), 5)
-        
+        self.assertEqual(len(result), 5)       
         self.assertTrue(all(x is None for x in result))
 
 if __name__ == "__main__":

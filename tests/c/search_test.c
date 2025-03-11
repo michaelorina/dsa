@@ -31,8 +31,38 @@ void test_binary_search() {
 
 }
 
+void test_two_crystal_balls() {
+    int arr1[] = {0, 0, 0, 0, 1, 1, 1};
+    assert(two_crystal_balls(arr1, 7) == 4);
+
+    int arr2[] = {0, 0, 0, 0, 0, 0, 0};
+    assert(two_crystal_balls(arr2, 7) == -1);
+
+    int arr3[] = {1, 1, 1, 1, 1};
+    assert(two_crystal_balls(arr3, 5) == 0);
+
+    int arr4[] = {0, 0, 0, 1, 1, 1};
+    assert(two_crystal_balls(arr4, 6) == 3);
+
+    int arr5[] = {0, 1, 1, 1, 1};
+    assert(two_crystal_balls(arr5, 5) == 1);
+
+    int arr6[] = {};
+    assert(two_crystal_balls(arr6, 0) == -1);
+
+    int *arr7 = NULL;
+    assert(two_crystal_balls(arr7, 0) == -1);
+
+    int arr8[] = {0, 0, 0, 0, 0, 1};
+    assert(two_crystal_balls(arr8, 6) == 5);
+
+    int arr9[] = {0, 0, 1};
+    assert(two_crystal_balls(arr9, 3) == 2);
+}
+
 int main() {
     test_linear_search();
     test_binary_search();
+    test_two_crystal_balls();
     return 0;
 }
