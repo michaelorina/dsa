@@ -47,7 +47,7 @@ void test_two_crystal_balls() {
     int arr5[] = {0, 1, 1, 1, 1};
     assert(two_crystal_balls(arr5, 5) == 1);
 
-    int arr6[] = {};
+    int arr6[] = {0};
     assert(two_crystal_balls(arr6, 0) == -1);
 
     int *arr7 = NULL;

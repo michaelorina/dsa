@@ -1,0 +1,45 @@
+==========================
+Test Run - 12-03
+==========================
+-------------------------------------------
+
+[0;34m🔍 Running C tests...[0m
+[0;36m▶ Running C test: arrays_test[0m
+[0;32m✅ arrays_test PASSED[0m
+[0;36m▶ Running C test: search_test[0m
+[0;32m✅ search_test PASSED[0m
+✅ 2/2 tests passed (100% success rate)
+
+[0;36m🐍 Running Python tests...[0m
+============================= test session starts ==============================
+platform linux -- Python 3.12.2, pytest-8.2.1, pluggy-1.5.0 -- /home/maestro/.pyenv/versions/3.12.2/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /home/maestro/workspace/github.com/michaelorina/dsa
+collecting ... collected 4 items
+
+tests/py/arrays_test.py::TestArrayFunction::test_array PASSED            [ 25%]
+tests/py/search_test.py::TestSearchFunctions::test_binary_search PASSED  [ 50%]
+tests/py/search_test.py::TestSearchFunctions::test_linear_search PASSED  [ 75%]
+tests/py/search_test.py::TestSearchFunctions::test_two_crystal_balls PASSED [100%]
+
+============================== 4 passed in 0.01s ===============================
+✅ 4/4 tests passed (100% success rate)
+
+[0;33m🚀 Running Go tests...[0m
+=== RUN   TestStaticArray
+--- PASS: TestStaticArray (0.00s)
+=== RUN   TestDynamicArray
+--- PASS: TestDynamicArray (0.00s)
+=== RUN   TestLinearSearch
+--- PASS: TestLinearSearch (0.00s)
+=== RUN   TestBinarySearch
+--- PASS: TestBinarySearch (0.00s)
+=== RUN   TestTwoCrystalBalls
+--- PASS: TestTwoCrystalBalls (0.00s)
+PASS
+ok  	dsa/tests/go	(cached)
+✅ 5/5 tests passed (100% success rate)
+
+[1m🎯 Final Summary:[0m
+✅ 11/11 tests passed (100% success rate)
+[0;32m✅ All tests completed successfully![0m
