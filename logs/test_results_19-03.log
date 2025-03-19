@@ -1,0 +1,48 @@
+==========================
+Test Run - 19-03
+==========================
+-------------------------------------------
+
+[0;34m🔍 Running C tests...[0m
+[0;36m▶ Running C test: arrays_test[0m
+[0;32m✅ arrays_test PASSED[0m
+[0;36m▶ Running C test: search_test[0m
+[0;32m✅ search_test PASSED[0m
+[0;36m▶ Running C test: sort_test[0m
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x17): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+./run_tests.sh: line 81: ./tests/c/sort_test: No such file or directory
+[0;31m❌ sort_test FAILED[0m
+⚠️  2/3 tests passed (66% success rate)
+
+[0;36m🐍 Running Python tests...[0m
+============================= test session starts ==============================
+platform linux -- Python 3.12.2, pytest-8.2.1, pluggy-1.5.0 -- /home/maestro/.pyenv/versions/3.12.2/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /home/maestro/workspace/github.com/michaelorina/dsa
+collecting ... collected 4 items
+
+tests/py/arrays_test.py::TestArrayFunction::test_array PASSED            [ 25%]
+tests/py/search_test.py::TestSearchFunctions::test_binary_search PASSED  [ 50%]
+tests/py/search_test.py::TestSearchFunctions::test_linear_search PASSED  [ 75%]
+tests/py/search_test.py::TestSearchFunctions::test_two_crystal_balls FAILED [100%]
+
+=================================== FAILURES ===================================
+__________________ TestSearchFunctions.test_two_crystal_balls __________________
+tests/py/search_test.py:39: in test_two_crystal_balls
+    assert two_crystal_balls([True] * 100) == 0
+E   assert -10 == 0
+E    +  where -10 = two_crystal_balls(([True] * 100))
+=========================== short test summary info ============================
+FAILED tests/py/search_test.py::TestSearchFunctions::test_two_crystal_balls
+========================= 1 failed, 3 passed in 0.03s ==========================
+⚠️  3/4 tests passed (75% success rate)
+
+[0;33m🚀 Running Go tests...[0m
+tests/go/sort_test.go:1:1: expected 'package', found 'EOF'
+❌ 0/0 tests passed (0% success rate)
+
+[1m🎯 Final Summary:[0m
+⚠️  5/7 tests passed (71% success rate)
+[0;31m❌ Some tests failed![0m

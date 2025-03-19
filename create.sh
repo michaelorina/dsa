@@ -4,14 +4,16 @@ TODAY=$(date +'%d-%m')
 
 if [ ! -d "$TODAY" ]; then
     echo "📂 Creating today's folder: $TODAY"
-    mkdir -p "$TODAY/arrays/go" "$TODAY/search/go"
+    mkdir -p "$TODAY/arrays/go" "$TODAY/search/go" "$TODAY/sort/go"
 fi
 
 declare -a function_files=("arrays/arrays.c" "arrays/arrays.py" "arrays/go/arrays.go"
-    "search/search.c" "search/search.py" "search/go/search.go")
+    "search/search.c" "search/search.py" "search/go/search.go"
+    "sort/sort.c" "sort/sort.py" "sort/go/sort.go")
 
 declare -a test_files=("tests/c/arrays_test.c" "tests/py/arrays_test.py" "tests/go/arrays_test.go"
-    "tests/c/search_test.c" "tests/py/search_test.py" "tests/go/search_test.go")
+    "tests/c/search_test.c" "tests/py/search_test.py" "tests/go/search_test.go"
+    "tests/c/sort_test.c" "tests/py/sort_test.py" "tests/go/sort_test.go")
 
 for file in "${function_files[@]}"; do
     if [ ! -f "$TODAY/$file" ]; then
