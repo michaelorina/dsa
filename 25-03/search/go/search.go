@@ -16,7 +16,7 @@ func BinarySearch(array []int, target int) int {
 
 	for left < right {
 		mid := left + (right - left) / 2
-		
+
 		if array[mid] == target {
 			return mid
 		} else if array[mid] < target {
@@ -25,7 +25,7 @@ func BinarySearch(array []int, target int) int {
 			right = mid
 		}
 	}
-	return -1;
+	return -1
 }
 
 func TwoCrystalBalls(array []bool) int {
@@ -38,11 +38,8 @@ func TwoCrystalBalls(array []bool) int {
 	}
 
 	start := max(i - jump, 0)
-	if i < n { i = n }
-	for j := start; j < i; j++ {
-		if array[j] {
-			return j;
-		}
+	for j := start; j < min(i + 1, n); j++ {
+		if array[j] { return j}
 	}
-	return -1
+	return -1;
 }
