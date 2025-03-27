@@ -1,0 +1,54 @@
+==========================
+Test Run - 27-03
+==========================
+-------------------------------------------
+
+[0;34m🔍 Running C tests...[0m
+[0;36m▶ Running C test: arrays_test[0m
+[0;32m✅ arrays_test PASSED[0m
+[0;36m▶ Running C test: search_test[0m
+In file included from tests/c/search_test.c:2:
+tests/c/../../latest/search/search.c:2:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+    2 | #import <math.h>
+      |  ^~~~~~
+[0;32m✅ search_test PASSED[0m
+[0;36m▶ Running C test: sort_test[0m
+[0;32m✅ sort_test PASSED[0m
+✅ 3/3 tests passed (100% success rate)
+
+[0;36m🐍 Running Python tests...[0m
+============================= test session starts ==============================
+platform linux -- Python 3.12.2, pytest-8.2.1, pluggy-1.5.0 -- /home/maestro/.pyenv/versions/3.12.2/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /home/maestro/workspace/github.com/michaelorina/dsa
+collecting ... collected 5 items
+
+tests/py/arrays_test.py::TestArrayFunction::test_array PASSED            [ 20%]
+tests/py/search_test.py::TestSearchFunctions::test_binary_search PASSED  [ 40%]
+tests/py/search_test.py::TestSearchFunctions::test_linear_search PASSED  [ 60%]
+tests/py/search_test.py::TestSearchFunctions::test_two_crystal_balls PASSED [ 80%]
+tests/py/sort_test.py::test_bubble_sort PASSED                           [100%]
+
+============================== 5 passed in 0.02s ===============================
+✅ 5/5 tests passed (100% success rate)
+
+[0;33m🚀 Running Go tests...[0m
+=== RUN   TestStaticArray
+--- PASS: TestStaticArray (0.00s)
+=== RUN   TestDynamicArray
+--- PASS: TestDynamicArray (0.00s)
+=== RUN   TestLinearSearch
+--- PASS: TestLinearSearch (0.00s)
+=== RUN   TestBinarySearch
+--- PASS: TestBinarySearch (0.00s)
+=== RUN   TestTwoCrystalBalls
+--- PASS: TestTwoCrystalBalls (0.00s)
+=== RUN   TestBubbleSort
+--- PASS: TestBubbleSort (0.00s)
+PASS
+ok  	dsa/tests/go	0.001s
+✅ 6/6 tests passed (100% success rate)
+
+[1m🎯 Final Summary:[0m
+✅ 14/14 tests passed (100% success rate)
+[0;32m✅ All tests completed successfully![0m
